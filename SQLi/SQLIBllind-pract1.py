@@ -9,6 +9,9 @@ The database contains a different table called users, with columns called userna
 To solve the lab, log in as the administrator user.
 
 password only contains lowercase, alphanumeric characters
+
+Lab Link: https://portswigger.net/web-security/sql-injection/blind/lab-conditional-responses
+
 '''
 
 from typing import Iterator

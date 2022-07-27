@@ -4,7 +4,11 @@
 
 The database contains a different table called users, with columns called username and password.
 
-To solve the lab, perform an SQL injection UNION attack that retrieves all usernames and passwords, and use the information to log in as the administrator user."""
+To solve the lab, perform an SQL injection UNION attack that retrieves all usernames and passwords, and use the information to log in as the administrator user.
+
+Lab link: https://portswigger.net/web-security/sql-injection/union-attacks/lab-retrieve-data-from-other-tables
+
+"""
 
 # Vulnerable query = '+UNION+SELECT+username,password+FROM+users--
 

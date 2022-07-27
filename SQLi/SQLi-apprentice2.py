@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 
-#This lab contains an SQL injection vulnerability in the login function.
-#To solve the lab, perform an SQL injection attack that logs in to the application as the administrator user.
+'''This lab contains an SQL injection vulnerability in the login function.
+To solve the lab, perform an SQL injection attack that logs in to the application as the administrator user.
 
+Lab Link: https://portswigger.net/web-security/sql-injection/lab-login-bypass
+'''
 
 import requests
 from bs4 import BeautifulSoup
