@@ -14,7 +14,7 @@ Lab Link: https://portswigger.net/web-security/sql-injection/blind/lab-condition
 
 '''
 
-from typing import Iterator
+
 import requests
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor
@@ -71,7 +71,7 @@ def login(username: str, password: str) -> None:
         print("nope")
 
 
-def threadExecutor(function: "function", iterator: list) -> Iterator:
+def threadExecutor(function: "function", iterator: list) -> list:
     with ThreadPoolExecutor() as executor:
         results = executor.map(function,iterator)
     return results
