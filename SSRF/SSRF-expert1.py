@@ -14,4 +14,3 @@ if "Congratulations" in r.text:
     print("solved")
 else:
     print("nope")
-    print(r.request.body)
