@@ -14,7 +14,7 @@ import websocket
 import time
 
 
-lab_id = '0a40006e030af11d80c5801b009a005a' #change based on generated lab
+lab_id = '0a6700a003aacffd80f62b5800870084' #change based on generated lab
 
 
 def trigger_filter():
@@ -28,9 +28,10 @@ def trigger_filter():
         if "Attack detected" in result:
             ws.close()
             return True   
-    except:
-        print("Lock out triggered")
-        return True
+    except websocket._exceptions.WebSocketBadStatusException as e:
+        if e.status_code == 401:
+            print("Lock out triggered")
+            return True
 
 
 def bypass_filter():
