@@ -11,7 +11,6 @@ Lab Link: https://portswigger.net/web-security/websockets/lab-manipulating-messa
 # Code adapted from websocket-client python package documentation ("pip install websocket-client"): https://pypi.org/project/websocket-client/
 
 import websocket
-import time
 
 
 lab_id = '0a6700a003aacffd80f62b5800870084' #change based on generated lab
