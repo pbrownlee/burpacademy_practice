@@ -29,7 +29,7 @@ r2 = s.get(uri)
 soup = BeautifulSoup(r2.text, 'html.parser')
 links = [link.get('href') for link in soup.find_all('a') if 'forgot-password' in link.get('href')]
 
-# We to use the most recently generated password reset link in case there are multiple links found from the array generator above
+# Use the most recently generated password reset link in case there are multiple links found from the array generator above
 uri = links[0]
 
 # From the reset link, get the token value contained within. We will need this for the password reset POST operation
