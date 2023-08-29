@@ -23,7 +23,7 @@ print(r1.text)
 
 # reload page to trigger success flag
 r2 = requests.get(uri)
-if 'solved' in r2.text:
+if 'Solved' in r2.text:
     print('solved')
 else:
     print('nope')
