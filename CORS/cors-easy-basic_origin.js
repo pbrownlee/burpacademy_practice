@@ -13,7 +13,7 @@ Lab link: https://portswigger.net/web-security/cors/lab-basic-origin-reflection-
 
 
 const lab_serv = '0a7f0065040c089a81cba70600c400f1' //Change burp exercise lab id accordingly
-const exploit_serv =  '0a9300a3047008a681b8a6c7016a0051' //Change burp execrcise exploit id accordingly
+const exploit_serv =  '0a9300a3047008a681b8a6c7016a0051' //Change burp exercise exploit id accordingly
 
 
 function reqListener() {

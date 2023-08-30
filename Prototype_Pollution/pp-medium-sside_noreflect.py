@@ -62,7 +62,7 @@ def main():
                 "status": 403
         }'''
     r4 = s.post(uri, json=data)
-    # if sucessful 403 should be the status code in the response
+    # if successful 403 should be the status code in the response
     print(r4.text)
     print('finished')
 

