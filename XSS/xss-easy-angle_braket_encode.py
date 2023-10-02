@@ -4,7 +4,7 @@ This lab contains a reflected cross-site scripting vulnerability in the search b
 Lab link: https://portswigger.net/web-security/cross-site-scripting/contexts/lab-attribute-angle-brackets-html-encoded
 '''
 
-'''Vulnurable code in search script
+'''Vulnerable code in search script
 <section class=search>
                         <form action=/ method=GET>
                             <input type=text placeholder='Search the blog...' name=search value="PAYLOAD">

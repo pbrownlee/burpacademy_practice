@@ -32,7 +32,7 @@ def main():
     }
     r2 = s.post(uri, data=data)
 
-    # When logged in, a cookie named Admin is created in the user session. We need to modifiy this value to 'true'
+    # When logged in, a cookie named Admin is created in the user session. We need to modify this value to 'true'
     for cookie in s.cookies:
         if cookie.name == 'Admin':
             cookie.value = 'true'

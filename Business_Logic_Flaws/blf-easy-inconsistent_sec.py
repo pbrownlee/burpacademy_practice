@@ -25,7 +25,7 @@ def main():
     uri = f"https://{lab_id}.web-security-academy.net/register"
     r = s.get(uri) 
     token = token_extract(r.text) # register csrf token
-    # then post our new acconut data
+    # then post our new account data
     data = { 'csrf': token,
             'username': 'hacker',
             'email': f'attacker@exploit-{email_id}.exploit-server.net',

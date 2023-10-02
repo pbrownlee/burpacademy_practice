@@ -8,7 +8,7 @@ You can log in to your own account using the following credentials: wiener:peter
 Lab Link: https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-high-level
 '''
 
-# The goal for this exercise is to manipulate the item quanties so that we can buy the jacket for under 100 dollars. Accomplished by:
+# The goal for this exercise is to manipulate the item quantities so that we can buy the jacket for under 100 dollars. Accomplished by:
 # Set Jacket (productid 1) qty to 1
 # Set Umbrella (productid 4) qty to -19
 

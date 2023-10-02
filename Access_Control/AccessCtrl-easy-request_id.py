@@ -33,7 +33,7 @@ def main():
     }
     r2 = s.post(uri, data=data)
 
-    # When logged in, use the id parmeter to get the carlos account information
+    # When logged in, use the id parameter to get the carlos account information
     uri = f"https://{lab_id}.web-security-academy.net/my-account?id=carlos"
     r3 = s.get(uri)
     # extract the API key from the response

